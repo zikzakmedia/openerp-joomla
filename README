@@ -1,0 +1,78 @@
+====== JOpenObject - API Joomla!-OpenERP ======
+
+JOpenObject is a component for Joomla! to integrate Joomla! with OpenERP.
+
+JOpenObject is not a client-web for OpenERP. JOpenObject is a class for your development new components or modules.
+
+===== Functions =====
+
+7 functions to connect to your Joomla! to OpenERP:
+
+ * connect
+ * search
+ * read
+ * create
+ * write
+ * unlink
+ * action
+
+Note:
+Browse function not exist because it's PHP.
+
+XML-RPC PHP library is a hard & slow and your code isn't beautifull. It's PHP! JOpenObejct is similar project OOOR (ruby) or OOOP (python), but write with PHP and Joomla! component.
+
+===== API =====
+
+<?php
+defined('_JEXEC') or die('Restricted access');
+
+require_once(JPATH_ROOT.DS.'components'.DS.'com_jopenobject'.DS.'helpers'.DS.'helper.php');
+
+$openerp = new JopenobjectHelper;
+
+$userId = $openerp->connect();
+
+# search
+$ids = $openerp->search($userId, "res.partner", "active", "=", 1);
+
+# read
+$fields = array("id" => "int",
+                "name" => "string",
+                "lang" => "string"
+        );
+
+$objs = $openerp->read($userId, "res.partner", $ids, $fields);
+
+echo count($objs);
+
+foreach($objs as $obj):
+    $obj = $obj->scalarval();
+    echo $obj["name"]->scalarval();
+endforeach;
+
+#create
+$values = array(
+        'name' => array("raimon", "string") ,
+        'lang' => array("en_US", "string")
+);
+
+$id_partner = $openerp->create($userId, "res.partner", $values);
+
+#edit
+$values = array(
+        'name' => array("raimon2", "string") 
+);
+
+$openerp->write($userId, "res.partner", array(new xmlrpcval($id_partner, "int")), $values);
+
+#unlink
+$id_partner = 22;
+$openerp->unlink($userId, "res.partner", array(new xmlrpcval($id_partner, "int")));
+
+#call an action/function
+$result = $openerp->action($userId, "pos.order", "create_order", $sale_order);
+?>
+
+===== Newsletter =====
+
+Example connection/component to add newsletter/partners in OpenERP
