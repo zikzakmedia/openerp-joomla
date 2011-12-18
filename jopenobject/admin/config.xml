@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+ <params>
+    <param name="xmlrpc_user" type="text" default="" label="XML-RPC User" description="" />
+    <param name="xmlrpc_password" type="text" default="" label="XML-RPC Password" description="" />
+    <param name="xmlrpc_dbname" type="text" default="" label="XML-RPC DBName" description="" />
+    <param name="xmlrpc_server_url" type="text" default="" label="XML-RPC Server URL" description="http://localhost:8069/xmlrpc" />
+	<param name="debug" type="radio" default="0" label="Debug" description="">
+		<option value="0">No</option>
+		<option value="1">Yes</option>
+	</param>
+ </params>
+</config>

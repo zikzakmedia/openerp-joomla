@@ -1,0 +1,44 @@
+==Component Newsletter==
+
+Joomla 1.5
+
+OpenERP modules requiered:
+- base
+- base_contact
+- newsletter
+
+Requiere JOpenObject Component for Joomla 1.5.
+
+==Features==
+Create a subscription and unsubscription newsletter.
+Update a next subscriptions and  unsubscriptions
+Create a contact, partner address and partner job.
+Not update Partner contact, partner address and partner job
+
+If not exist partner job, create
+If exist partner job, not create or update => nothing
+
+==Licence==
+
+GNU General Public License
+
+==SQL INSTALL==
+
+INSERT INTO `zik_components` (`id`, `name`, `link`, `menuid`,
+`parent`, `admin_menu_link`, `admin_menu_alt`, `option`, `ordering`,
+`admin_menu_img`, `iscore`, `params`, `enabled`) VALUES
+(317, 'Newsletter', 'option=com_newsletter', 0, 0,
+'option=com_newsletter', 'Newsletter', 'com_newsletter', 0,
+'js/ThemeOffice/component.png', 0, '', 1);
+
+CREATE TABLE IF NOT EXISTS `zik_newsletter_log` (
+ `id` int(11) NOT NULL auto_increment,
+ `name` varchar(256) NOT NULL,
+ `email` varchar(256) NOT NULL,
+ `created` datetime NOT NULL,
+ `data` text NOT NULL,
+ `subscribe` tinyint(3) NOT NULL,
+ PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
+
+

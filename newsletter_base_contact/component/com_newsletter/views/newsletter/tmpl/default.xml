@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: default.xml 10880 2008-08-31 17:51:53Z willebil $ -->
+<metadata>
+	<layout title="Newsletter Layout">
+		<message>
+			<![CDATA[NEWSLETTER LAYOUT DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>Newsletter Layout</name>
+		<description>Newsletter LAYOUT DESC</description>
+		<params>
+            <param name="newsletter_title" type="text" default="" label="Title" />
+            <param name="newsletter_top" type="textarea" rows="5" cols="50" default="" label="Top Message" />
+            <param name="newsletter_bottom" type="textarea" rows="5" cols="50" default="" label="Bottom Message" />
+            <param name="metakey" type="textarea" rows="5" cols="50" default="" label="Meta Keywords" />
+            <param name="metadesc" type="textarea" rows="5" cols="50" default="" label="Meta Description" />
+            <param name="newsletter_unsubscribe_reason" type="text" default="" label="Unsubscribe Reason - ID" />
+            <param name="newsletter_url_conditions" type="text" default="" label="URL Conditions" />
+		    <param name="newsletter_subscription" type="radio" default="0" label="Subscription Newsletter ID" description="">
+			    <option value="0">No</option>
+			    <option value="1">Yes</option>
+		    </param>
+            <param name="newsletter_subscription_id" type="text" default="" label="Subscription. Newsletter OpenERP ID" description="If you selected Subscription Newsletter ID, insert ID newsletter" />
+		</params>
+	</state>
+</metadata>

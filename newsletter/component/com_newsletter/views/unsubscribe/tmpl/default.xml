@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: default.xml 10880 2008-08-31 17:51:53Z willebil $ -->
+<metadata>
+	<layout title="Newsletter Layout">
+		<message>
+			<![CDATA[NEWSLETTER LAYOUT DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>Newsletter Layout</name>
+		<description>Newsletter LAYOUT DESC</description>
+		<params>
+            <param name="newsletter_unsubscribe_reason" type="text" default="" label="Unsubscribe Reason - ID" />
+		</params>
+	</state>
+</metadata>

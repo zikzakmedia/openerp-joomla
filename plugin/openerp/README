@@ -1,0 +1,15 @@
+==XML-RPC - OpenERP Plugin==
+
+Joomla 1.5
+
+See more information and demo:
+http://wiki.zikzakmedia.com/openerp:xmlrpc-joomla-plugin
+
+==Licence==
+
+GNU General Public License
+
+==SQL INSTALL==
+
+INSERT INTO `zik_plugins` (`id`, `name`, `element`, `folder`, `access`, `ordering`, `published`, `iscore`, `client_id`, `checked_out`, `checked_out_time`, `params`) VALUES
+(217, 'XML-RPC - OpenERP', 'openerp', 'xmlrpc', 0, 0, 1, 0, 0, 71, '2010-10-01 06:32:55', 'debug=0\n\n');

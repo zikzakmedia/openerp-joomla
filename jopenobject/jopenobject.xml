@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0" method="upgrade">
+<name>Jopenobject</name>
+<creationDate>20/10/2010</creationDate>
+<author>Raimon Esteve</author>
+<copyright>This component is released under the GNU/GPL License</copyright>
+<authorEmail>zikzak@zikzakmedia.com</authorEmail>
+<authorUrl>http://www.zikzakmedia.com</authorUrl>
+<version>1.0.1</version>
+<description>JOpenObject is not a client-web for OpenERP. JOpenObject is a class for your development new components or modules. .</description>
+
+<files>
+	<filename>index.html</filename>
+	<filename>jopenobject.php</filename>
+	<folder>helpers</folder>
+</files>
+
+<params>
+	<param name="xmlrpc_user" default="" />
+	<param name="xmlrpc_password" default="" />
+	<param name="xmlrpc_dbname" default="" />
+	<param name="xmlrpc_server_url" default="" />
+	<param name="debug" default="" />
+</params>
+
+<installfile>install.jopenobject.php</installfile>
+
+<uninstallfile>uninstall.jopenobject.php</uninstallfile>
+
+<administration>
+
+	<menu img="js/ThemeOffice/component.png">JOpenObject</menu>
+
+	<files folder="admin">
+		<filename>index.html</filename>
+		<filename>admin.jopenobject.php</filename>
+		<filename>toolbar.jopenobject.html.php</filename>
+		<filename>toolbar.jopenobject.php</filename>
+		<filename>config.xml</filename>
+		<folder>helpers</folder>
+	</files>
+
+</administration>
+</install>

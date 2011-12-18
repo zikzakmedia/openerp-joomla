@@ -1,0 +1,42 @@
+==Component Newsletter==
+
+Joomla 1.5
+
+OpenERP modules requiered:
+- base
+- newsletter
+
+Create a subscription and unsubscription newsletter.
+Create a partner and partner address
+
+Requiere JOpenObject Component for Joomla 1.5.
+
+==Licence==
+
+GNU General Public License
+
+==SQL INSTALL==
+
+INSERT INTO `zik_components` (`id`, `name`, `link`, `menuid`,
+`parent`, `admin_menu_link`, `admin_menu_alt`, `option`, `ordering`,
+`admin_menu_img`, `iscore`, `params`, `enabled`) VALUES
+(316, 'JOpenObject', 'option=com_jopenobject', 0, 0,
+'option=com_jopenobject', 'JOpenObject', 'com_jopenobject', 0,
+'js/ThemeOffice/component.png', 0,
+'xmlrpc_user=admin\nxmlrpc_password=admin\nxmlrpc_dbname=oerp_mfusa\nxmlrpc_server_url=http://192.168.0.13:8069/xmlrpc\ndebug=1\n\n',
+1),
+(317, 'Newsletter', 'option=com_newsletter', 0, 0,
+'option=com_newsletter', 'Newsletter', 'com_newsletter', 0,
+'js/ThemeOffice/component.png', 0, '', 1);
+
+CREATE TABLE IF NOT EXISTS `zik_newsletter_log` (
+ `id` int(11) NOT NULL auto_increment,
+ `name` varchar(256) NOT NULL,
+ `email` varchar(256) NOT NULL,
+ `created` datetime NOT NULL,
+ `data` text NOT NULL,
+ `subscribe` tinyint(3) NOT NULL,
+ PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
+
+

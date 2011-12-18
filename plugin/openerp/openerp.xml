@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="xmlrpc">
+	<name>XML-RPC - OpenERP OpenERP</name>
+	<author>Zikzakmedia</author>
+	<creationDate>September 2010</creationDate>
+	<copyright>Zikzakmedia</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>zikzak@zikzakmedia.com</authorEmail>
+	<authorUrl>www.zikzakmedia.com</authorUrl>
+	<version>1.0</version>
+	<description>OpenERP XML-RPC API</description>
+	<files>
+		<filename plugin="openerp">openerp.php</filename>
+	</files>
+	<params>
+      <param name="debug" type="radio" default="1" label="Debug" description="Put logs at path_log/openerp">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </param>
+	</params>
+</install>
